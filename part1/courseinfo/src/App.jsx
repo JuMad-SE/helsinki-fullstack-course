@@ -14,8 +14,8 @@ const Content = (props) => {
   console.log("Props content", props.parts);
   return (
     <>
-      {props.parts.map((part) => (
-        <Part name={part.name} exercise={part.exercises} />
+      {props.parts.map((part, index) => (
+        <Part key={index} name={part.name} exercise={part.exercises} />
       ))}
     </>
   );
