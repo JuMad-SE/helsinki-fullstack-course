@@ -23,7 +23,7 @@ const Content = ({ parts }) => {
 };
 
 const Total = ({ parts }) => {
-  const exercises = parts.map((part, index) => part.exercises);
+  const exercises = parts.map((part) => part.exercises);
   const total = exercises.reduce(
     (accumulator, value) => accumulator + value,
     0
