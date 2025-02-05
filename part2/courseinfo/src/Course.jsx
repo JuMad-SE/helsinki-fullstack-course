@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const Header = ({ course }) => {
   return <h1>{course}</h1>;
 };
@@ -31,12 +29,18 @@ const Total = ({ parts }) => {
   return <b>total of {total} exercises</b>;
 };
 
-const Course = ({ course }) => {
+const Course = ({ courses }) => {
   return (
     <div>
-      <Header course={course.name} />
-      <Content parts={course.parts} />
-      <Total parts={course.parts} />
+      {courses.map((course) => {
+        return (
+          <div>
+            <Header course={course.name} />
+            <Content parts={course.parts} />
+            <Total parts={course.parts} />
+          </div>
+        );
+      })}
     </div>
   );
 };
