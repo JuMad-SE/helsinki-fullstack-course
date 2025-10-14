@@ -34,4 +34,3 @@ flowchart TD
     D --> E[Submission & Evaluation]
 ```
 
-modificado con MCP
